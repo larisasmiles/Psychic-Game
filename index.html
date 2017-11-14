@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -21,16 +21,38 @@
   
     
   <script type="text/javascript">
+
   var letters = 'abcdefghijklmnopqrstuvwxyz';
-  var letterArray = aplha.split('');
+  var letterArray = letters.split('');
   var wins = 0;
   var losses = 0;
   var wrongLetter = [];
+  var guessesLeft = ''
 
-  document.getElementById("count").innerHTML= gueesesLeft;
+  document.getElementById("count").innerHTML = guessesLeft;
 
   var randomLetter = letterArray[Math.floor(Math.random()*letterArray.length)];
   console.log(randomLetter);
+
+  document.click = function(event) {
+    var userGuess = String.fromCharCode(event.keycode).toLowerCase();
+      alert('Your Guess was : ' + userGuess);
+
+      if (userGuess == randomLetter) {
+        alert(' You read my mind! ');
+        wins ++;
+      }
+      else if (guessesLeft > 0) {
+        alert(" You're not trying hard enough!")
+        wrongLetter.push(userGuess);
+        console.log(wrongLetter);
+        document.getElementById("guesses").innerHTML = wrongLetter + " ";
+        guessesLeft --;
+      }
+    document.getElementById("win").innerHTML = wins;
+    document.getElementById("lose").innerHTML = losses;
+    document.getElementById("count").innerHTML = guessesLeft;
+  }
 
   </script>
   </body>
