@@ -1,0 +1,21 @@
+*{
+	text-align: center;
+	margin: 10px;
+	color: white;
+	background-color: black;
+}
+img{
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+p {
+  font-size: 20px;
+  padding: 10px;
+
+}
