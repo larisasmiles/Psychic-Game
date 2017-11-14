@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Psychic Game</title>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <h1>The Psychic Game</h1>
+        <p>Wins: <span id="win"></span></p>
+        <p>Losses: <span id="lose"></span></p>
+        <p>Guesses Left: <span id="count"></span></p>
+        <p id="letterGuess">Your Guesses So Far: <span id="guesses"></span></p>
+  
+    
+  <script type="text/javascript">
+  var letters = 'abcdefghijklmnopqrstuvwxyz';
+  var letterArray = aplha.split('');
+  var wins = 0;
+  var losses = 0;
+  var wrongLetter = [];
+
+  document.getElementById("count").innerHTML= gueesesLeft;
+
+  var randomLetter = letterArray[Math.floor(Math.random()*letterArray.length)];
+  console.log(randomLetter);
+
+  </script>
+  </body>
+</html>
